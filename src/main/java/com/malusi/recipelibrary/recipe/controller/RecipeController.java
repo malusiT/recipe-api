@@ -27,7 +27,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/")
 public class RecipeController {
   private final RecipeRepository repository;
 
@@ -84,7 +84,7 @@ public class RecipeController {
         .map(recipe -> {
           recipe.setName(newRecipe.getName());
           recipe.setDescription(newRecipe.getDescription());
-          recipe.setRecipeList(newRecipe.getIngredients());
+          recipe.setIngredients(newRecipe.getIngredients());
           recipe.setInstructions(newRecipe.getInstructions());
           return repository.save(recipe);
         })

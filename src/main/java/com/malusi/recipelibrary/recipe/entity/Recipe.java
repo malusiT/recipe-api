@@ -96,6 +96,10 @@ public class Recipe {
     return this.instructions;
   }
 
+  public void setId(Long id){
+    this.id = id;
+  }
+
   public void setName(String name){
     this.name = name;
   }
@@ -104,12 +108,20 @@ public class Recipe {
     this.description = description;
   }
 
-  public void setRecipeList(List<String> ingredients){
+  public void setIngredients(List<String> ingredients){
     this.ingredients = ingredients;
   }
   
   public void setInstructions(List<String> instructions){
     this.instructions = instructions;
+  }
+
+  public int getDuration(){
+    return duration;
+  }
+
+  public void setDuration(int duration){
+    this.duration = duration;
   }
 
   public Instant getCreatedAt(){
